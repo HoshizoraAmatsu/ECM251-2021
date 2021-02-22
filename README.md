@@ -2,10 +2,9 @@
 Repositório criado para gerenciar os projetos e aulas de Linguagens I.
 
 # Desenvolvedor:
-## Guilherme Jun Ishikawa
+- Guilherme Jun Ishikawa
 
 # Principais linguagens:
 - Java
 - Python
 - C
-
