@@ -39,6 +39,15 @@ public class Sistema
                 } else {
                     System.out.println("Não foi possível realizar a operação!");
                 }
+            case 3:
+                System.out.println("Qual a quantia de dinheiro?");
+                double quantiaParaSacar = scanner.nextDouble();
+                if (this.conta.depositar(quantiaParaSacar);)
+                {
+                    System.out.println("Operação Realizada com Sucesso!");
+                } else {
+                    System.out.println("Não foi possível realizar a operação!");
+                }
             default:
                 System.out.println("Essa funcionalidade ainda não foi implementada");
         }
