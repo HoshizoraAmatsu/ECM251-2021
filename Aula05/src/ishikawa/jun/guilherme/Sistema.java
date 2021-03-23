@@ -42,8 +42,8 @@ public class Sistema
                 break;
             case 3:
                 System.out.println("Qual a quantia de dinheiro?");
-                double quantiaParaSacar = scanner.nextDouble();
-                this.conta.depositar(quantiaParaSacar);
+                double quantiaParaDepositar = scanner.nextDouble();
+                this.conta.depositar(quantiaParaDepositar);
                 System.out.println("Operação realizada com sucesso!");
                 break;
             case 5:
