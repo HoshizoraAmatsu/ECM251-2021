@@ -29,4 +29,18 @@ public class Contas
     {
         return usuarios.getNome();
     }
+
+    public void deposito(double valor)
+    {
+        this.saldo += valor;
+    }
+
+    public boolean pagamento(double valor)
+    {
+        if(valor <= this.saldo){
+            this.saldo -= valor;
+            return true;
+        }
+        return false;
+    }
 }
