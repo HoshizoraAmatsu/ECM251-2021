@@ -6,22 +6,25 @@ import java.util.Random;
 
 public class Transacoes
 {
-    private static int getRandomNumberInRange(int min ,int max)
+    private static int getRandomNumberInRange()
     {
         Random r = new Random();
-        return r . nextInt((max - min) + 1) + min ;
+        return r.nextInt((9999 - 1000) + 1) + 1000 ;
     }
 
-    public String gerarQR(int valor, Contas contas)
+    public String gerarQR(double valor, Contas contas)
     {
-        int cod = getRandomNumberInRange(1000, 9999);
-        String s = contas.getIdConta() + ";" + contas.getNome() + ";" + valor + ";" + cod;
-        System.out.println(s);
-        return s;
+        int cod = getRandomNumberInRange();
+        return contas.getIdConta() + ";" + contas.getNome() + ";" + valor + ";" + cod;
     }
 
-    public boolean pagamento(String QR, )
+    public void pagamento(String QR, Contas pagador, Contas beneficiario)
     {
-
+        String[] dados = QR.split(";");
+        double valor = Double.parseDouble(dados[2]);
+        if(pagador.pagamento(valor))
+        {
+            beneficiario.deposito(valor);
+        }
     }
 }
