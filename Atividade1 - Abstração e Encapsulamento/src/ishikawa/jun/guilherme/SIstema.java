@@ -2,6 +2,6 @@
 
 package ishikawa.jun.guilherme;
 
-public class Transacoes
+public class SIstema
 {
 }
