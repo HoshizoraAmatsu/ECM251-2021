@@ -43,4 +43,14 @@ public class Contas
         }
         return false;
     }
+
+    @Override
+    public String toString()
+    {
+        return "Contas{" +
+                "idConta=" + idConta +
+                ", saldo=" + saldo +
+                ", usuarios=" + usuarios +
+                '}';
+    }
 }
