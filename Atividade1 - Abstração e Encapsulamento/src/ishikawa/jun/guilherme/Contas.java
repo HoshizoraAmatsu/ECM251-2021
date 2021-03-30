@@ -14,4 +14,19 @@ public class Contas
         this.saldo = saldo;
         this.usuarios = new Usuarios(nome);
     }
+
+    public int getIdConta()
+    {
+        return idConta;
+    }
+
+    public double getSaldo()
+    {
+        return saldo;
+    }
+
+    public String getNome()
+    {
+        return usuarios.getNome();
+    }
 }
