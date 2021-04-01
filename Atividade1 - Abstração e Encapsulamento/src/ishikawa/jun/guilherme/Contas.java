@@ -8,12 +8,16 @@ public class Contas
     private double saldo;
     private Usuarios usuarios;
 
+    //Constructor
+
     public Contas(int idConta, double saldo, String nome)
     {
         this.idConta = idConta;
         this.saldo = saldo;
         this.usuarios = new Usuarios(nome);
     }
+
+    //Getters
 
     public int getIdConta()
     {
@@ -30,6 +34,8 @@ public class Contas
         return usuarios.getNome();
     }
 
+    //Operações de saldo
+
     public void deposito(double valor)
     {
         this.saldo += valor;
@@ -37,6 +43,7 @@ public class Contas
 
     public boolean pagamento(double valor)
     {
+        //Verifica se existe saldo suficiente para realizar um pagamento
         if(valor <= this.saldo){
             this.saldo -= valor;
             return true;

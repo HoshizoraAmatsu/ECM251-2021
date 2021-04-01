@@ -8,10 +8,14 @@ public class Usuarios
     private String senha;
     private String email;
 
+    //Constructor
+
     public Usuarios(String nome)
     {
         this.nome = nome;
     }
+
+    //getter
 
     public String getNome()
     {
