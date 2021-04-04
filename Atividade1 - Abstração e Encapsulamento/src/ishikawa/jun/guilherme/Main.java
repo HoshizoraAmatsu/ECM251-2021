@@ -13,7 +13,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         //Cria lista das Contas
-        ArrayList<Contas> listaID = new ArrayList<Contas>();
+        ArrayList<Contas> listaID = new ArrayList<>();
 
         System.out.println("Informe o nome do Usuário 1: ");
         String nome1 = scanner.nextLine();
