@@ -16,7 +16,7 @@ public class Contas
     {
         this.saldo = saldo;
         this.usuarios = new Usuarios(nome);
-        this.idConta = contas.size() + 1;
+        this.idConta = contas.size() + 1; //id começa com 1 se não existirem outras contas
     }
 
     //Getters
