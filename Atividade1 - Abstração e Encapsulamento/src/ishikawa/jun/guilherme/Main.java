@@ -22,11 +22,11 @@ public class Main {
         System.out.println("Informe o nome do Usuário 3: ");
         String nome3 = scanner.nextLine();
 
-	    Contas user1 = new Contas(1, 1000, nome1);
+	    Contas user1 = new Contas(listaID, 1000, nome1);
 	    listaID.add(user1);
-        Contas user2 = new Contas(2, 250, nome2);
+        Contas user2 = new Contas(listaID, 250, nome2);
         listaID.add(user2);
-        Contas user3 = new Contas(3, 3000, nome3);
+        Contas user3 = new Contas(listaID, 3000, nome3);
         listaID.add(user3);
 
         //Inicia as operações

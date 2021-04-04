@@ -2,6 +2,8 @@
 
 package ishikawa.jun.guilherme;
 
+import java.util.ArrayList;
+
 public class Contas
 {
     private int idConta;
@@ -10,11 +12,11 @@ public class Contas
 
     //Constructor
 
-    public Contas(int idConta, double saldo, String nome)
+    public Contas(ArrayList<Contas> contas, double saldo, String nome)
     {
-        this.idConta = idConta;
         this.saldo = saldo;
         this.usuarios = new Usuarios(nome);
+        this.idConta = contas.size() + 1;
     }
 
     //Getters
