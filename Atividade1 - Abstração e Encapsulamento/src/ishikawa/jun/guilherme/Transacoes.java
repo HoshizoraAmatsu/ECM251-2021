@@ -2,6 +2,7 @@
 
 package ishikawa.jun.guilherme;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Transacoes
@@ -21,14 +22,18 @@ public class Transacoes
         return contas.getIdConta() + ";" + contas.getNome() + ";" + valor + ";" + getRandomNumberInRange();
     }
 
-    public void pagamento(String QR, Contas pagador, Contas beneficiario)
+    public void pagamento(String QR, Contas pagador, ArrayList<Contas> listaID)
     {
         //Confere o valor do pagamento e se existe saldo para o pagamento. Caso exista, realiza o pagamento
         String[] dados = QR.split(";");
         double valor = Double.parseDouble(dados[2]);
-        if(pagador.pagamento(valor))
+        int id = Integer.parseInt(dados[0]) - 1; //ArrayList começa do 0, por isso diminuimos 1 do id
+        if(pagador.pagamento(valor)) //Verifica se o usuario possui saldo para realizar o pagamento
         {
-            beneficiario.deposito(valor);
+            //Com o id fornecido pelo QRcode, conseguimos encontrar a conta que recebera o pagamento e realiza-lo
+            Contas recebedor = listaID.get(id);
+            recebedor.deposito(valor);
+            listaID.set(id, recebedor);
         }
     }
 }

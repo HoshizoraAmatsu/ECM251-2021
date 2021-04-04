@@ -3,6 +3,7 @@
 package ishikawa.jun.guilherme;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -10,6 +11,9 @@ public class Main {
     {
         //Inicia o Scanner
         Scanner scanner = new Scanner(System.in);
+
+        //Cria lista das Contas
+        ArrayList<Contas> listaID = new ArrayList<Contas>();
 
         System.out.println("Informe o nome do Usuário 1: ");
         String nome1 = scanner.nextLine();
@@ -19,8 +23,11 @@ public class Main {
         String nome3 = scanner.nextLine();
 
 	    Contas user1 = new Contas(1, 1000, nome1);
+	    listaID.add(user1);
         Contas user2 = new Contas(2, 250, nome2);
+        listaID.add(user2);
         Contas user3 = new Contas(3, 3000, nome3);
+        listaID.add(user3);
 
         //Inicia as operações
         Transacoes op = new Transacoes();
@@ -35,14 +42,14 @@ public class Main {
         String QR = op.gerarQR(250, user1); //Gera QR de pagamento para o usuario 1
 
         //Operações
-        op.pagamento(QR, user2, user1);
-        op.pagamento(QR, user3, user1);
-        op.pagamento(QR, user2, user1);
+        op.pagamento(QR, user2, listaID);
+        op.pagamento(QR, user3, listaID);
+        op.pagamento(QR, user2, listaID);
 
         String QR2 = op.gerarQR(1000, user2); //Gera QR de pagamento para o usuario 2
 
         //Operações
-        op.pagamento(QR2, user3, user2);
+        op.pagamento(QR2, user3, listaID);
 
         //Mostra o estado final das contas antes das operações (nome + saldo)
 
