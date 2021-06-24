@@ -5,7 +5,7 @@ import ishikawa.jun.guilherme.member.types.MemberFunction;
 
 public class ScriptGuys extends Member
 {
-    public ScriptGuys(String username, String email, String function)
+    public ScriptGuys(String username, String email)
     {
         super(username, email, MemberFunction.SCRIPT_GUYS.toString());
     }

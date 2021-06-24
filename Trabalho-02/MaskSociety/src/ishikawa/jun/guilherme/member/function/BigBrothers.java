@@ -5,7 +5,7 @@ import ishikawa.jun.guilherme.member.types.MemberFunction;
 
 public class BigBrothers extends Member
 {
-    public BigBrothers(String username, String email, String function)
+    public BigBrothers(String username, String email)
     {
         super(username, email, MemberFunction.BIG_BROTHERS.toString());
     }
