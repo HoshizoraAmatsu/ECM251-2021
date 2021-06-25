@@ -1,12 +1,12 @@
 package ishikawa.jun.guilherme.member.function;
 
 import ishikawa.jun.guilherme.member.Member;
-import ishikawa.jun.guilherme.member.types.MemberFunction;
+import ishikawa.jun.guilherme.member.enumeracoes.MemberFunction;
 
 public class MobileMembers extends Member
 {
-    public MobileMembers(String username, String email)
+    public MobileMembers(String username, String email, String pwd)
     {
-        super(username, email, MemberFunction.MOBILE_MEMBERS.toString());
+        super(username, email, pwd, MemberFunction.MOBILE_MEMBERS.toString());
     }
 }

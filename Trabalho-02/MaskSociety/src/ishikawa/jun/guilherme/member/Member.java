@@ -1,32 +1,60 @@
 package ishikawa.jun.guilherme.member;
 
-import ishikawa.jun.guilherme.member.types.SystemTime;
+import ishikawa.jun.guilherme.member.enumeracoes.SystemTime;
 
 public class Member implements PostarMensagem
 {
     protected String username;
     protected String email;
+    protected String pwd;
     protected String function;
     protected SystemTime st = SystemTime.NORMAL;
 
-    public Member(String username, String email, String function) {
+    public Member(String username, String email, String pwd, String function)
+    {
         this.username = username;
         this.email = email;
+        this.pwd = pwd;
         this.function = function;
+    }
+
+    public String getUsername()
+    {
+        return username;
+    }
+
+    public String getFunction()
+    {
+        return function;
+    }
+
+    public String getPwd()
+    {
+        return pwd;
+    }
+
+    public SystemTime getSt()
+    {
+        return st;
     }
 
     public void changeST()
     {
-        if (st == SystemTime.NORMAL)
-            st = SystemTime.EXTRA;
+        if (this.st == SystemTime.NORMAL)
+            this.st = SystemTime.EXTRA;
         else
-            st = SystemTime.NORMAL;
+            this.st = SystemTime.NORMAL;
+    }
+
+    public void printST()
+    {
+        System.out.println(this.st);
     }
 
     @Override
     public void postarMensagem()
     {
-        switch (function)
+        switch (this.function)
         {
             case "MOBILE_MEMBERS":
                 if (st == SystemTime.NORMAL)
@@ -55,7 +83,7 @@ public class Member implements PostarMensagem
             default:
                 System.out.println(
                         """
-                        Something went wrong, so have this instead!
+                        お帰りなさいご主人様
                         
                         ⣿⡇⣿⣿⣿⠛⠁⣴⣿⡿⠿⠧⠹⠿⠘⣿⣿⣿⡇⢸⡻⣿⣿⣿⣿⣿⣿⣿
                         ⢹⡇⣿⣿⣿⠄⣞⣯⣷⣾⣿⣿⣧⡹⡆⡀⠉⢹⡌⠐⢿⣿⣿⣿⡞⣿⣿⣿

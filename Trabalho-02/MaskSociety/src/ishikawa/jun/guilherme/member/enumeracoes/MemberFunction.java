@@ -1,4 +1,4 @@
-package ishikawa.jun.guilherme.member.types;
+package ishikawa.jun.guilherme.member.enumeracoes;
 
 public enum MemberFunction
 {
