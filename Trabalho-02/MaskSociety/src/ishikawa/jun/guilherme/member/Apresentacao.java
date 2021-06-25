@@ -1,4 +1,4 @@
-package ishikawa.jun.guilherme.menu;
+package ishikawa.jun.guilherme.member;
 
 public interface Apresentacao
 {
