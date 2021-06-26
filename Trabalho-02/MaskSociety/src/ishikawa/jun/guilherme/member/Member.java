@@ -57,55 +57,26 @@ public class Member implements PostarMensagem, Apresentacao, showMenu
     @Override
     public void postarMensagem(String message)
     {
-        System.out.println("Message from " + this.function);
+        System.out.println("Message from default member");
         System.out.println(message);
-        switch (this.function)
-        {
-            case "MOBILE_MEMBERS":
-                if (st == SystemTime.NORMAL)
-                    System.out.println("Happy Coding!");
-                else
-                    System.out.println("MAsK_S0C13ty");
-                break;
-            case "HEAVY_LIFTERS":
-                if (st == SystemTime.NORMAL)
-                    System.out.println("Podem contar conosco!");
-                else
-                    System.out.println("N00b_qu3_n_Se_r3pita.bat");
-                break;
-            case "SCRIPT_GUYS":
-                if (st == SystemTime.NORMAL)
-                    System.out.println("*");
-                else
-                    System.out.println("QU3Ro_S3us_r3curs0s.py");
-                break;
-            case "BIG_BROTHERS":
-                if (st == SystemTime.NORMAL)
-                    System.out.println("Sempre ajudando as pessoas membros ou não S2!");
-                else
-                    System.out.println("...");
-                break;
-            default:
-                System.out.println(
-                        """
-                        お帰りなさいご主人様
-                        
-                        ⣿⡇⣿⣿⣿⠛⠁⣴⣿⡿⠿⠧⠹⠿⠘⣿⣿⣿⡇⢸⡻⣿⣿⣿⣿⣿⣿⣿
-                        ⢹⡇⣿⣿⣿⠄⣞⣯⣷⣾⣿⣿⣧⡹⡆⡀⠉⢹⡌⠐⢿⣿⣿⣿⡞⣿⣿⣿
-                        ⣾⡇⣿⣿⡇⣾⣿⣿⣿⣿⣿⣿⣿⣿⣄⢻⣦⡀⠁⢸⡌⠻⣿⣿⣿⡽⣿⣿
-                        ⡇⣿⠹⣿⡇⡟⠛⣉⠁⠉⠉⠻⡿⣿⣿⣿⣿⣿⣦⣄⡉⠂⠈⠙⢿⣿⣝⣿
-                        ⠤⢿⡄⠹⣧⣷⣸⡇⠄⠄⠲⢰⣌⣾⣿⣿⣿⣿⣿⣿⣶⣤⣤⡀⠄⠈⠻⢮
-                        ⠄⢸⣧⠄⢘⢻⣿⡇⢀⣀⠄⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⡀⠄⢀
-                        ⠄⠈⣿⡆⢸⣿⣿⣿⣬⣭⣴⣿⣿⣿⣿⣿⣿⣿⣯⠝⠛⠛⠙⢿⡿⠃⠄⢸
-                        ⠄⠄⢿⣿⡀⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣿⣿⡾⠁⢠⡇⢀
-                        ⠄⠄⢸⣿⡇⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⣫⣻⡟⢀⠄⣿⣷⣾
-                        ⠄⠄⢸⣿⡇⠄⠈⠙⠿⣿⣿⣿⣮⣿⣿⣿⣿⣿⣿⣿⣿⡿⢠⠊⢀⡇⣿⣿
-                        ⠒⠤⠄⣿⡇⢀⡲⠄⠄⠈⠙⠻⢿⣿⣿⠿⠿⠟⠛⠋⠁⣰⠇⠄⢸⣿⣿⣿
-                        ⠄⠄⠄⣿⡇⢬⡻⡇⡄⠄⠄⠄⡰⢖⠔⠉⠄⠄⠄⠄⣼⠏⠄⠄⢸⣿⣿⣿
-                        ⠄⠄⠄⣿⡇⠄⠙⢌⢷⣆⡀⡾⡣⠃⠄⠄⠄⠄⠄⣼⡟⠄⠄⠄⠄⢿⣿⣿
-                        """);
-                break;
-        }
+        System.out.println(
+                """
+                if I show up, something went wrong.
+                
+                ⣿⡇⣿⣿⣿⠛⠁⣴⣿⡿⠿⠧⠹⠿⠘⣿⣿⣿⡇⢸⡻⣿⣿⣿⣿⣿⣿⣿
+                ⢹⡇⣿⣿⣿⠄⣞⣯⣷⣾⣿⣿⣧⡹⡆⡀⠉⢹⡌⠐⢿⣿⣿⣿⡞⣿⣿⣿
+                ⣾⡇⣿⣿⡇⣾⣿⣿⣿⣿⣿⣿⣿⣿⣄⢻⣦⡀⠁⢸⡌⠻⣿⣿⣿⡽⣿⣿
+                ⡇⣿⠹⣿⡇⡟⠛⣉⠁⠉⠉⠻⡿⣿⣿⣿⣿⣿⣦⣄⡉⠂⠈⠙⢿⣿⣝⣿
+                ⠤⢿⡄⠹⣧⣷⣸⡇⠄⠄⠲⢰⣌⣾⣿⣿⣿⣿⣿⣿⣶⣤⣤⡀⠄⠈⠻⢮
+                ⠄⢸⣧⠄⢘⢻⣿⡇⢀⣀⠄⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⡀⠄⢀
+                ⠄⠈⣿⡆⢸⣿⣿⣿⣬⣭⣴⣿⣿⣿⣿⣿⣿⣿⣯⠝⠛⠛⠙⢿⡿⠃⠄⢸
+                ⠄⠄⢿⣿⡀⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣿⣿⡾⠁⢠⡇⢀
+                ⠄⠄⢸⣿⡇⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⣫⣻⡟⢀⠄⣿⣷⣾
+                ⠄⠄⢸⣿⡇⠄⠈⠙⠿⣿⣿⣿⣮⣿⣿⣿⣿⣿⣿⣿⣿⡿⢠⠊⢀⡇⣿⣿
+                ⠒⠤⠄⣿⡇⢀⡲⠄⠄⠈⠙⠻⢿⣿⣿⠿⠿⠟⠛⠋⠁⣰⠇⠄⢸⣿⣿⣿
+                ⠄⠄⠄⣿⡇⢬⡻⡇⡄⠄⠄⠄⡰⢖⠔⠉⠄⠄⠄⠄⣼⠏⠄⠄⢸⣿⣿⣿
+                ⠄⠄⠄⣿⡇⠄⠙⢌⢷⣆⡀⡾⡣⠃⠄⠄⠄⠄⠄⣼⡟⠄⠄⠄⠄⢿⣿⣿
+                """);
     }
 
     @Override
@@ -123,16 +94,24 @@ public class Member implements PostarMensagem, Apresentacao, showMenu
         Scanner s = new Scanner(System.in);
         boolean whileBool = true;
 
+        System.out.println("""
+                                                  Welcome to the
+                 __  __    _    ____  _  _______ ____     ____   ___   ____ ___ _____ _______   __
+                |  \\/  |  / \\  / ___|| |/ / ____|  _ \\   / ___| / _ \\ / ___|_ _| ____|_   _\\ \\ / /
+                | |\\/| | / _ \\ \\___ \\| ' /|  _| | | | |  \\___ \\| | | | |    | ||  _|   | |  \\ V /\s
+                | |  | |/ ___ \\ ___) | . \\| |___| |_| |   ___) | |_| | |___ | || |___  | |   | | \s
+                |_|  |_/_/   \\_\\____/|_|\\_\\_____|____/___|____/ \\___/ \\____|___|_____| |_|   |_| \s
+                
+                              
+                """);
+
         while (whileBool)
         {
-            System.out.println("\nWelcome to the Masked society");
             System.out.println("Work time: " + getSt());
             System.out.println("""
                     
-                    1 - Present
-                    2 - Post message
-                    3 - Change time
-                    4 - Check time
+                    1 - Post message
+                    2 - Change time
                     0 - Log out
                     """);
             String iter = s.next();
@@ -140,25 +119,20 @@ public class Member implements PostarMensagem, Apresentacao, showMenu
             switch (iter)
             {
                 case "1":
-                    apresentar();
-                    break;
-                case "2":
-                    System.out.println("Write your message: ");
+                    System.out.println("Message: ");
                     String message = s.next();
                     postarMensagem(message);
                     s.reset();
                     break;
-                case "3":
+                case "2":
                     changeST();
-                    break;
-                case "4":
-                    System.out.println(getSt());
                     break;
                 case "0":
                     whileBool = false;
                     break;
                 default:
                     System.out.println("Invalid input");
+                    break;
             }
         }
     }

@@ -2,6 +2,7 @@ package ishikawa.jun.guilherme.member.function;
 
 import ishikawa.jun.guilherme.member.Member;
 import ishikawa.jun.guilherme.member.enumeracoes.MemberFunction;
+import ishikawa.jun.guilherme.member.enumeracoes.SystemTime;
 
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -19,9 +20,19 @@ public class BigBrothers extends Member
         Scanner s = new Scanner(System.in);
         boolean whileBool = true;
 
+        System.out.println("""
+                                                  Welcome to the
+                 __  __    _    ____  _  _______ ____     ____   ___   ____ ___ _____ _______   __
+                |  \\/  |  / \\  / ___|| |/ / ____|  _ \\   / ___| / _ \\ / ___|_ _| ____|_   _\\ \\ / /
+                | |\\/| | / _ \\ \\___ \\| ' /|  _| | | | |  \\___ \\| | | | |    | ||  _|   | |  \\ V /\s
+                | |  | |/ ___ \\ ___) | . \\| |___| |_| |   ___) | |_| | |___ | || |___  | |   | | \s
+                |_|  |_/_/   \\_\\____/|_|\\_\\_____|____/___|____/ \\___/ \\____|___|_____| |_|   |_| \s
+                                               
+                               
+                """);
+
         while (whileBool)
         {
-            System.out.println("\nWelcome to the Masked society");
             System.out.println("Work time: " + getSt());
             System.out.println("""
                                         
@@ -83,6 +94,7 @@ public class BigBrothers extends Member
                 2 - Heavy Lifters
                 3 - Script Guys
                 4 - Big Brothers
+                
                 """);
         String func = s.next();
         switch (func)
@@ -100,29 +112,33 @@ public class BigBrothers extends Member
                 func = MemberFunction.BIG_BROTHERS.toString();
                 break;
             default:
-                System.out.println("\nInvalid input");
+                System.out.println("Invalid input");
                 return;
         }
 
-        int i = -1;
-        int id = 0;
+        int id = -1;
 
         for (Member member : m)
         {
-            if (member.getFunction().equals(func) && i == -1)
+            if (member.getFunction().equals(func) && id == -1)
             {
-                id++;
-                System.out.println("\n" + id + "user found");
                 System.out.println("\nDelete " + member.getUsername() + "? (Y/N)");
-                String resp = s.next();
-                if (resp.equalsIgnoreCase("y"))
+                String resp = s.next().toLowerCase();
+                switch (resp)
                 {
-                    i = m.indexOf(member);
+                    case "y":
+                        id = m.indexOf(member);
+                        break;
+                    case "n":
+                        break;
+                    default:
+                        System.out.println("Invalid input, assuming negative response.");
+                        break;
                 }
             }
         }
-        if (i != -1)
-            m.remove(i);
+        if (id != -1)
+            m.remove(id);
     }
 
     private static void createMember(LinkedList<Member> m)
@@ -176,5 +192,16 @@ public class BigBrothers extends Member
                     break;
             }
         }
+    }
+
+    @Override
+    public void postarMensagem(String message)
+    {
+        System.out.println("Message from " + this.function);
+        System.out.println(message);
+        if (this.st == SystemTime.NORMAL)
+            System.out.println("Sempre ajudando as pessoas membros ou não S2!");
+        else
+            System.out.println("...");
     }
 }

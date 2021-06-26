@@ -13,17 +13,6 @@ public class Menu
         LinkedList<Member> m = new LinkedList<>();
         Scanner s = new Scanner(System.in);
 
-        System.out.println("""
-                                                  Welcome to the
-                 __  __    _    ____  _  _______ ____     ____   ___   ____ ___ _____ _______   __
-                |  \\/  |  / \\  / ___|| |/ / ____|  _ \\   / ___| / _ \\ / ___|_ _| ____|_   _\\ \\ / /
-                | |\\/| | / _ \\ \\___ \\| ' /|  _| | | | |  \\___ \\| | | | |    | ||  _|   | |  \\ V /\s
-                | |  | |/ ___ \\ ___) | . \\| |___| |_| |   ___) | |_| | |___ | || |___  | |   | | \s
-                |_|  |_/_/   \\_\\____/|_|\\_\\_____|____/___|____/ \\___/ \\____|___|_____| |_|   |_| \s
-                                               
-                               
-                """);
-
         boolean bool = true;
         while (bool)
         {
@@ -100,10 +89,11 @@ public class Menu
         }
     }
 
-    private static Member login(LinkedList<Member> m) //Eu podia fazer logins unicos, mas a preguiça é maior
+    private static Member login(LinkedList<Member> m)
     {
         if (m.isEmpty())
         {
+            //This considers that the first one to access this menu is going to be a BigBrother
             System.out.println("There is no user registered peko! Creating one now peko...\n");
             m.add(new BigBrothers("Hoshizora", "name@email.com", "pwd"));
             System.out.println("Created user:");
